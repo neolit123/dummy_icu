@@ -3,8 +3,8 @@
  * TextCodec15codecForUtfTextERK10QByteArray(), which hints about unicode
  * conversation dependencies.
  * 
- * so, NOPs are not acceptible here if QtCore was built with ICU.
- * on the other hand rolling your own methods is still possible, but pehaps
+ * so, NOPs are not acceptable here if QtCore was built with ICU.
+ * on the other hand rolling your own methods is still possible, but perhaps
  * too much of task for a 1mb DLL replacement. */
 
 #include "dummy_icu.h"
