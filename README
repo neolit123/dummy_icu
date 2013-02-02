@@ -6,16 +6,16 @@ dynamic libraries released either under the MIT and LGPL licenses.
 the source code in this package is released in the public domain (see LICENSE),
 which makes it compatible, but mind that it may be _violating_
 the aforementioned licenses. also it may have other disruptive effects
-give the essence of the modification.
+given the essence of the modification.
 
 use at your own risk.
 
 ================================================================================
 motivation and execution:
 
-provided is a replacement for your large ICU DLLs when you distribute
-your Qt5.x.x application, but have actually downloaded Qt built with
-ICU support - i.e. you haven't compiled it yourself.
+provided is a replacement for the large ICU DLLs when you distribute
+your Qt5.x.x application, but when you have downloaded Qt pre-built with
+ICU support - i.e. you haven't compiled Qt yourself.
 
 ICU is a pretty large library; the SVN source code at their repository with
 all the branches is at near 2gb or more. Qt is pretty large itself
@@ -49,9 +49,9 @@ the short answer is icudt49.dll, icuin49.dll related calls, but the truth is
 i haven't examined much in there. if the method names are descriptive enough
 my guess is only the "actual" localization-data part won't work.
 unicode conversations should be still possible via icuuc49.dll, which we
-leave unaffected.
+leave unaffected. webkit will probably not work at all.
 
-so as long as you don't replace icuuc49.dll with the NOP version, unicode text
+as long as you don't replace icuuc49.dll with the NOP version, unicode text
 should be handled fine and it won't break QtCore.
 
 ================================================================================
