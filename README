@@ -24,9 +24,9 @@ tend to download the precompiled binaries, which usually contain the full
 package.
 
 if you have downloaded Qt pre-built, you may have noticed that it has one
-especially big file (~17mb) called icudt49.dll on which your
+especially big file (~17mb) called icudtXX.dll on which your
 applications will depend on. this file contains the ICU static
-localization data, which is massive. another file is icuin49.dll
+localization data, which is massive. another file is icuinXX.dll
 which exposes ICU "attribute control" and some other methods to Qt.
 
 if we aren't interested much in localization for an app, perhaps we can
@@ -40,17 +40,17 @@ building and installation:
 1) call 'make' in the source folder
 Makefile assumes you are using Mingw with Qt, so if you wish to build
 with MSVC, you have modify it for the "cl + link" toolchain. 
-2) backup icudt49.dll and icuin49.dll in your project directory
+2) backup icudtXX.dll and icuinXX.dll in your project directory
 3) copy the resulted DLLs from ./bin to your project directory
 
 ================================================================================
 what won't work:
 
-the short answer is icudt49.dll, icuin49.dll related calls, but the truth is
+the short answer is icudtXX.dll, icuinXX.dll related calls, but the truth is
 i haven't examined much in there. if the method names are descriptive enough
 my guess is only the "actual" localization-data part won't work.
-unicode conversations should be still possible via icuuc49.dll, which we
-leave unaffected. as long as you don't replace icuuc49.dll with the NOP
+unicode conversations should be still possible via icuucXX.dll, which we
+leave unaffected. as long as you don't replace icuucXX.dll with the NOP
 version, unicode text should be handled fine and it shouldn't break QtCore.
 
 i'm pretty certain webkit will not work.

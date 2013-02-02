@@ -1,0 +1,8 @@
+#include "dummy_icu.h"
+
+DECLARE_NOP_SUFFIX_VER(ucol_close)
+DECLARE_NOP_SUFFIX_VER(ucol_getAttribute)
+DECLARE_NOP_SUFFIX_VER(ucol_setAttribute)
+DECLARE_NOP_SUFFIX_VER(ucol_getSortKey)
+DECLARE_NOP_SUFFIX_VER(ucol_open)
+DECLARE_NOP_SUFFIX_VER(ucol_strcoll)
