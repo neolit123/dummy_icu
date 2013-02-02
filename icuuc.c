@@ -1,4 +1,4 @@
-/* we do not compile this file, as the real icuuc49.dll is likely
+/* we do not compile this file, as the real icuucXX.dll is likely
  * to be required. a crash in QtCore is possible at
  * TextCodec15codecForUtfTextERK10QByteArray(), which hints about unicode
  * conversation dependencies.
