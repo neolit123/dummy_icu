@@ -37,11 +37,12 @@ blank NOP analogues for our dummy DLLs.
 ================================================================================
 building and installation:
 
-1) call 'make' in the source folder
+1) open Makefile and set ICU_VER to the version of ICU you are targetting
+2) call 'make' in the source folder
 Makefile assumes you are using Mingw with Qt, so if you wish to build
 with MSVC, you have modify it for the "cl + link" toolchain. 
-2) backup icudtXX.dll and icuinXX.dll in your project directory
-3) copy the resulted DLLs from ./bin to your project directory
+3) backup icudtXX.dll and icuinXX.dll in your project directory
+4) copy the resulted DLLs from ./bin to your project directory
 
 ================================================================================
 what won't work:
