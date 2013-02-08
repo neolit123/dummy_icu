@@ -39,8 +39,7 @@ building and installation:
 
 1) open Makefile and set ICU_VER to the version of ICU you are targetting
 2) call 'make' in the source folder
-Makefile assumes you are using Mingw with Qt, so if you wish to build
-with MSVC, you have modify it for the "cl + link" toolchain. 
+(if you are using Qt with MSVC call 'make -f Makefile.msvc') 
 3) backup icudtXX.dll and icuinXX.dll in your project directory
 4) copy the resulted DLLs from ./bin to your project directory
 
