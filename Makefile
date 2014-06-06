@@ -3,7 +3,7 @@
 # - see icuuc.c for info on why icuucXX.dll isn't compiled
 # - expect only icuinXX.dll and icudtXX.dll in ./bin/
 
-ICU_VER = 49
+ICU_VER = 52
 CC = gcc
 LINK = gcc
 CFLAGS = -DICU_VER=$(ICU_VER) -Os
