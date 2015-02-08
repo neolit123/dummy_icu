@@ -42,6 +42,10 @@ building and installation:
 (if you are using Qt with MSVC call 'make -f Makefile.msvc') 
 3) backup icudtXX.dll and icuinXX.dll in your project directory
 4) copy the resulted DLLs from ./bin to your project directory
+5) if you are targeting a newer ICU version and your app still fails to run,
+a dialog should show what function is missing from a specific DLL.
+try declaring that function in the appropriate .c file using some of the macros
+from dummy_icu.h.
 
 ================================================================================
 what won't work:
